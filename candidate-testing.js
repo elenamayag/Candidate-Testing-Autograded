@@ -20,9 +20,9 @@ let candidateAnswers;
 function askForName(candidateName) {
     console.log("Enter your name: ");
 candidateName = this.candidateName 
-}
-  // TODO 1.1b: Ask for candidate's name //
 
+  // TODO 1.1b: Ask for candidate's name //
+}
 
 
 function askQuestion(question){
@@ -53,7 +53,7 @@ function runProgram() {
   askForName(this.candidateName);
   // TODO 1.1c: Greet candidate using their name //
   console.log("\nHello," + this.candidateName + ". Good luck with your quiz!");
-  askQuestion(this.question);
+  askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
 
