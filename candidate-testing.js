@@ -37,10 +37,10 @@ candidateAnswer = this.question
 
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 function gradeQuiz(candidateAnswer) {
-  if (correctAnswer) {
-    console.log("Correct! ");
+  if (candidateAnswer == correctAnswer) {
+    console.log("Correct!");
   } else { 
-    console.log("Incorrect. ") ;
+    console.log("Incorrect.") ;
   }
 
 
