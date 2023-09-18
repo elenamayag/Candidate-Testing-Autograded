@@ -50,13 +50,13 @@ function gradeQuiz(candidateAnswer) {
   return grade;
 }
 function runProgram() {
-  askForName();
+  askForName(this.candidateName);
   // TODO 1.1c: Greet candidate using their name //
   console.log("\nHello," + this.candidateName + ". Good luck with your quiz!");
-  askQuestion();
+  askQuestion(this.question);
   gradeQuiz(this.candidateAnswers);
 }
-console.log('hello')
+
 // ----------- Don't write any code or change any code below this line ---------- //
 module.exports = {
   candidateName: candidateName,
