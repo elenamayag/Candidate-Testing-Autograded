@@ -1,4 +1,5 @@
 const input = require('readline-sync');
+const { askForNumber } = require('../../javascript-projects/loops/studio/solution');
 
 // TODO 2: modify your quiz app to ask 5 questions //
 
@@ -33,19 +34,31 @@ for (let i = 0; i < questions.length ; i++) {
 
 
 
+
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 function gradeQuiz(candidateAnswers){
-  for (let i = 0; i < candidateAnswers.length; i++) 
-    if (candidateAnswers[i] == correctAnswers[i]){
+  let correctCandidateAnswer = 0
+
+
+  for (let i = 0; i < candidateAnswers.length; i++) {
+
+    if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
+      (correctCandidateAnswer++);
       console.log(`${candidateAnswers[i]}, Correct!`);
-    } else if (candidateAnswers[i] != correctAnswers[i]){ 
+    } else if (candidateAnswers[i].toLowerCase() != correctAnswers[i].toLowerCase()) { 
       console.log(`${candidateAnswers[i]}, Incorrect.`);
     }
+  }
+  
+  
+  let grade = (correctCandidateAnswer / questions.length * 100);
+  console.log(grade);
+  
+//TODO 3.2 use this variable to calculate the candidates score.
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-  return grade;
+  return grade ;
 }
+
 
 
 function runProgram() {
