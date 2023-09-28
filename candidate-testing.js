@@ -1,5 +1,4 @@
 const input = require('readline-sync');
-const { askForNumber } = require('../../javascript-projects/loops/studio/solution');
 
 // TODO 2: modify your quiz app to ask 5 questions //
 
@@ -81,4 +80,4 @@ module.exports = {
   candidateAnswers: candidateAnswers,
   gradeQuiz: gradeQuiz,
   runProgram: runProgram
-};
+}
